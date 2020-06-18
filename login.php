@@ -3,7 +3,7 @@ session_start();
 
 require('config.php');
 
-$message = '';
+$message;
 $alertClass = 'alert-info';
 
 $title= 'Connexion';

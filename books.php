@@ -3,7 +3,7 @@
 session_start();
 
 $title = 'Accueil - Livres';
-$message = '';
+$message;
 
 require 'config.php';
 

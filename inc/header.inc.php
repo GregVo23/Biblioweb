@@ -40,6 +40,7 @@ if(isset($extra_js)){
 				<ul>
 					<li><a href="<?= SITE_URL ?>/index.php">Accueil</a></li>
 					<li><a href="<?= SITE_URL ?>/books.php">Catalogue</a></li>
+					<li><a href="<?= SITE_URL ?>/authors.php">Auteurs</a></li>
 			<?php if(isset($_SESSION['login'])) { ?>	
 					<li><a href="<?= SITE_URL ?>/profil.php">Profil</a></li>
 			<?php } 
@@ -59,7 +60,12 @@ if(isset($extra_js)){
 			
 		<!--	<a href="<?= SITE_URL ?>/login.php?btLogout">Se déconnecter</a> -->
 			<?php } ?>
-	  </header>
-	  
 
-	
+	  </header>
+
+	  <?php if(!empty($message)) { ?>
+				<div class="alert <?= $alertClass; ?>" role="alert">
+					<?= $message; ?>
+				</div>
+			<?php } ?>
+
